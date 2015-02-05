@@ -1,0 +1,12 @@
+gavares/fortune:
+  PkgInclude: 
+    - '*'
+  PkgExclude:
+    - 'node_modules/'
+    - 'DistelliCLI'
+  PostInstall:
+    - 'sudo apt-get install nodejs -y'
+    - 'npm install'
+    - 'sudo ln -sf `which nodejs` /usr/bin/node'
+  Exec:
+    - 'exec /usr/bin/node server.js'
