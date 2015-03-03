@@ -1,4 +1,6 @@
 gavares/fortune:
+  Env:
+    - FORTUNE_PATH: '/usr/games/fortune'
   PkgInclude: 
     - '*'
   PkgExclude:

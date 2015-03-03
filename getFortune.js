@@ -1,7 +1,9 @@
 var exec = require('child_process').exec;
 
+var fortuneCmd = process.env.FORTUNE_PATH || 'fortune'
+
 var getFortune = function(req, res, next){
-  exec("fortune", function(err, stdout, stderr){
+  exec(fortuneCmd, function(err, stdout, stderr){
     if (err) {
       return next(err);
     }
