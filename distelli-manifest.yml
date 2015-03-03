@@ -6,6 +6,7 @@ gavares/fortune:
     - 'DistelliCLI'
   PostInstall:
     - 'sudo apt-get install nodejs -y'
+    - 'sudo apt-get install fortune -y'
     - 'npm install'
     - 'sudo ln -sf `which nodejs` /usr/bin/node'
   Exec:
